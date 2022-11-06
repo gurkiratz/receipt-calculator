@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer utilities {
+  tr,
+  th {
+    @apply border-2 border-slate-500;
+  }
+} */
+
+tr,
+th {
+  border: 2px #999 solid;
+}
+
+th {
+  text-align: left;
+}
+
+#date,
+#time,
+#total-price,
+#taxes,
+#due {
+  display: none;
+  font-weight: bold;
+}
