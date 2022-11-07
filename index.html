@@ -4,18 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Receipt Calculator App</title>
     <link href="/dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/title icon.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/1989fe51dd.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div class="main-container w-full h-screen">
       <div class="grid grid-cols-3 gap-x-1 h-full">
         <div
-          class="w-full bg-cyan-900 col-span-3 flex items-center justify-center tracking-widest"
+          class="w-full bg-white col-span-3 flex items-center justify-evenly"
         >
-          <p class="underline text-center text-white text-xl font-bold">
+          <p
+            class="select-none outline px-2 text-center text-slate-600 text-3xl font-bold tracking-widest bg-white hover:bg-slate-50 cursor-pointer active:bg-slate-200"
+          >
             Receipt calucator
           </p>
         </div>
@@ -172,16 +179,16 @@
         <div
           class="w-full bg-slate-500 col-span-3 flex items-center justify-center"
         >
-          <p class="text-center text-xl text-white">
-            <em>
-              Made with ♥ by
-              <a
-                href="https://github.com/gurkiratz/01-Receipt-Calculator-App"
-                class="underline"
-              >
-                Gurkirat</a
-              ></em
+          <p class="text-center text-xl text-white font-mono">
+            Made with ♥ by
+            <a
+              href="https://github.com/gurkiratz/01-Receipt-Calculator-App"
+              target="_blank"
+              class="underline active:text-slate-300"
             >
+              Gurkirat
+              <i class="text-sm fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </p>
         </div>
       </div>
