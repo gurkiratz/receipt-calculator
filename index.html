@@ -16,18 +16,20 @@
   </head>
   <body>
     <div class="main-container w-full h-screen">
-      <div class="grid grid-cols-3 gap-x-1 h-full">
-        <div
-          class="w-full bg-white col-span-3 flex items-center justify-evenly"
+      <div class="space-y-1 lg:grid grid-cols-3 lg:space-y-0 gap-x-1 h-screen">
+        <header
+          class="py-2 w-full bg-white col-span-3 flex items-center justify-evenly"
         >
           <p
             class="select-none outline px-2 text-center text-slate-600 text-3xl font-bold tracking-widest bg-white hover:bg-slate-50 cursor-pointer active:bg-slate-200"
           >
-            Receipt calucator
+          <a href="https://github.com/gurkiratz/receipt-calculator" target="_blank">Receipt calucator</a>
+            
           </p>
-        </div>
-        <div class="admin">
-          <div class="bg-gray-400 text-black h-full">
+        </header>
+
+        <section class="admin h-full">
+          <div class="bg-gray-400 text-black min-h-[600px]">
             <div class="bg-gray-600">
               <p class="text-center text-white text-4xl py-4 font-bold">
                 Admin
@@ -84,10 +86,10 @@
               ></span>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="checkout">
-          <div class="bg-gray-400 text-black h-full">
+        <section class="checkout h-full">
+          <div class="bg-gray-400 text-black min-h-[600px]">
             <div class="bg-gray-600">
               <p class="text-center text-white text-4xl py-4 font-bold">
                 Checkout
@@ -125,23 +127,14 @@
               </div>
               <button
                 id="cart-btn"
-                class="w-32 bg-white border-2 border-black mb-8"
+                class="w-32 bg-white border-2 border-black"
               >
                 Add to Cart
               </button>
 
-              <div class="grid grid-cols-2 gap-x-2 gap-y-1">
-                <button class="w-32 bg-white border-2 border-black">1</button>
-                <button class="w-32 bg-white border-2 border-black">2</button>
-                <button class="w-32 bg-white border-2 border-black">3</button>
-                <button class="w-32 bg-white border-2 border-black">4</button>
-                <button class="w-32 bg-white border-2 border-black">5</button>
-                <button class="w-32 bg-white border-2 border-black">6</button>
-                <button class="w-32 bg-white border-2 border-black">7</button>
-                <button class="w-32 bg-white border-2 border-black">8</button>
-                <button class="w-32 bg-white border-2 border-black">9</button>
-                <button class="w-32 bg-white border-2 border-black">0</button>
-              </div>
+              <table id="cart-table" class="border-separate w-full px-2 bg-gray-400">
+                
+              </table>
               <button
                 id="pay-btn"
                 class="w-32 items-end bg-white border-2 border-black"
@@ -150,9 +143,10 @@
               </button>
             </div>
           </div>
-        </div>
-        <div class="receipt">
-          <div class="bg-gray-400 text-black h-full">
+        </section>
+        
+        <section class="receipt h-full">
+          <div class="bg-gray-400 text-black min-h-[600px]">
             <div class="bg-gray-600">
               <p class="text-center text-white text-4xl py-4 font-bold">
                 Receipt
@@ -175,9 +169,9 @@
               <p id="due" class="not-hidden"></p>
             </div>
           </div>
-        </div>
-        <div
-          class="w-full bg-slate-500 col-span-3 flex items-center justify-center"
+        </section>
+        <footer
+          class="py-2 w-full bg-slate-500 col-span-3 flex items-center justify-center"
         >
           <p class="text-center text-xl text-white font-mono">
             Made with ♥ by
@@ -191,7 +185,7 @@
               <i class="text-sm fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </p>
-        </div>
+        </footer>
       </div>
     </div>
   </body>

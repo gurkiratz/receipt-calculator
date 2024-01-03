@@ -3,7 +3,6 @@ function theId(id) {
 }
 
 let prodArray = [];
-// let prodObj = {};
 
 // Admin functions
 
@@ -15,36 +14,11 @@ theId("btn-add-product").addEventListener("click", () =>
 );
 
 function addProd(prodName, prodSelect) {
-  // if (prodArray.length === 0) {
-  //   prodArray.push({ name: prodName });
-  //   console.log("len - 0");
-  // } else if (prodArray.length > 0) {
-  //   console.log("len more");
-  //   for (j of prodArray) {
-  //     if (j.name === prodName && j.price) {
-  //       console.log("hi");
-  //     } else {
-  //       prodArray.push({ name: prodName });
-  //     }
-  //   }
-  // }
-  ///////////////
-  // if (prodArray.length > 0) {
-  //   for (j of prodArray) {
-  //     if (j.name === prodName) prodArray = prodArray;
-  //     else prodArray.push({ name: prodName });
-  //   }
-  // } else {
-  //   prodArray.push({ name: prodName });
-  // }
 
   prodArray.push({ name: prodName });
-  jsonProdArray = prodArray.map(JSON.stringify);
-  // jsonProdArray = jsonProdArray.filter((e) => !e.includes("price"));
-  prodSet = new Set(jsonProdArray);
+  const jsonProdArray = prodArray.map(JSON.stringify);
+  const prodSet = new Set(jsonProdArray);
   prodArray = Array.from(prodSet).map(JSON.parse);
-  // prodArray = prodArray.filter((e) => e.name == prodName && e.price);
-  // let uniqueArr = [];
 
   console.log(prodArray);
 
@@ -138,10 +112,26 @@ function addCart(quantity, checkoutSelect) {
         alert(`Added ${quantity} units of ${j.name.toUpperCase()} in cart.`);
       }
     }
+
+    theId("cart-table").innerHTML = `<tr>
+    <th>Product</th>
+    <th>$/unit</th>
+    <th>Quantity</th>
+    </tr>`;
+    for (j of prodArray) {
+      if (j.name && j.price && j.quantity) {
+        theId("cart-table").innerHTML += `<tr>
+      <th>${j.name}</th>
+      <th>$${j.price}</th>
+      <th>${j.quantity}</th>
+      </tr>`;
+      }
+    }
     console.log(prodArray);
   }
 }
 
+// Pay Button
 theId("pay-btn").addEventListener("click", () => payFunc());
 
 function payFunc() {
